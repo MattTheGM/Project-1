@@ -1,3 +1,18 @@
+var coords =  {
+    lat: 45.8841,
+    lng: -123.9686
+};
+
+function initMap() {
+    // console.log(coords);
+    var map = new google.maps.Map(
+        document.getElementById('map'), {
+            zoom: 15, center: coords});
+    var marker = new google.maps.Marker({
+        position: coords, map: map
+    });
+}
+
 $( document ).ready(function() {
     const searchButton = document.querySelector('.search-button');
     const searchList = document.querySelector('.search-list');
@@ -15,7 +30,7 @@ $( document ).ready(function() {
         var eDisplayMoment = document.getElementById('display-moment');
         eDisplayMoment.innerHTML = NowMoment;    
     }
-
+    
     //Show future Date & Time
     function dayFuture() {
         var dayOneMoment = moment().add(1, 'days').format('dddd MMM Do');
@@ -68,13 +83,9 @@ $( document ).ready(function() {
         newSearch.classList.add("prior-search");
         newSearch.setAttribute('type', "submit");
         newSearch.setAttribute('id',keyNum);
-        searchList.appendChild(newSearch);
 
         ///////////////////////////////////Work Bench///////////////////////////////////
-        var recentSearch = localStorage.getItem(keyNum)
-        console.log(recentSearch);
-        
-        document.getElementById(keyNum).value = recentSearch;
+
         ///////////////////////////////////Work Bench///////////////////////////////////
 
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?" + "q=" + inputValue.value + ",US&appid=" + APIKey;
@@ -93,7 +104,30 @@ $( document ).ready(function() {
             // Log the resulting object
             console.log('******* :' + JSON.parse(JSON.stringify(response)));
 
-            // // Transfer content to HTML
+            // Transfer content to HTML
+
+            coords =  {
+                lat: response.coord.lat,
+                lng: response.coord.lon
+            };
+            initMap();
+            // function updateMap(arg1,arg2) {
+            //     $("#map").empty();
+            //     var coords =  {
+            //         lat = arg1,
+            //         lng = arg2
+            //     };
+            //     console.log("Value of Coords.Lat" + coords.lat);
+            //     console.log("Value of Coords.Lng" + coords.lng);
+            //     console.log(coords);
+            //     var mapnew = new google.maps.Map(
+            //         document.getElementById('map'), {zoom: 4, center: coords});
+            //     var markernew = new google.maps.Marker({position: coords, map: map});
+            // }
+
+            // updateMap(coords.lat,coords.lng);
+
+            console.log("New Coords:" + JSON.stringify(coords));
             $(".today-city").html("<h1>" + response.name + "</h1>");
             $(".today-wind").text("Wind Speed: " + response.wind.speed + " MPH");
             $(".today-humidity").text("Humidity: " + response.main.humidity + " %");
