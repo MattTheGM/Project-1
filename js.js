@@ -60,6 +60,14 @@ $( document ).ready(function() {
 
     //User Search & Store
 
+    $('#pyramid-button').click(function pyramidMap() {
+        coords =  {
+            lat: 29.9792,
+            lng: 31.1342
+        };
+        initMap();
+    });
+
     $('.search-button').click(function recordSearch() {
         //Increment keyNum Variable
         keyNum++;
