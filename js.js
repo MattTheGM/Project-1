@@ -69,9 +69,28 @@ $( document ).ready(function() {
         initMap();
     });
 
-    function returnWeatherCoords() {
+    // function returnWeatherCoords() {
+    //     var latLongQuery = "api.openweathermap.org/data/2.5/weather?" + "lat=" coords.lat + "&lon=" coords.lng + "&appid=" + APIKey;
+    //     $.ajax({    
+    //         url: latLongQuery,      
+    //         method: "GET"
+    //     })
+    //     .then(function(response) {
+    //         $(".today-city").html("<h1>" + response.name + "</h1>");
+    //         $(".today-wind").text("Wind Speed: " + response.wind.speed + " MPH");
+    //         $(".today-humidity").text("Humidity: " + response.main.humidity + " %");
 
-    }
+    //     // Display Weather Icons
+    //     // Icon sample => <i class="owf owf-200"></i>
+    //         $("#display-icon").html("<i class='owf owf-" + response.weather[0].id + " owf-5x'" + "></i>");
+    //         // // Convert the temp to fahrenheit    
+    //         var tempF = (response.main.temp - 273.15) * 1.80 + 32;
+    //         console.log(tempF);
+    //         // add temp content to html
+    //         $(".today-temp").text("Temperature (K) " + response.main.temp);
+    //         $(".today-tempF").text("Temperature: " + tempF.toFixed(2) + " (°F)");
+    //     });
+    // }
 
     $('.search-button').click(function recordSearch() {
         //Increment keyNum Variable
@@ -101,6 +120,7 @@ $( document ).ready(function() {
 
         ///////////////////////////////////Work Bench///////////////////////////////////
 
+        
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?" + "q=" + inputValue.value + ",US&appid=" + APIKey;
         var queryTwoURL = "https://api.openweathermap.org/data/2.5/forecast?" + "q=" + inputValue.value + ",US&appid=" + APIKey; 
 

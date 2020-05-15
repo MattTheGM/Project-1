@@ -158,11 +158,6 @@ footer {
     position: relative; 
 }
 
-
-.searched-location {
-
-}
-
 .search-container {
     display: grid;
     justify-content: center;
