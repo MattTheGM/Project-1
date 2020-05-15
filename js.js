@@ -65,8 +65,13 @@ $( document ).ready(function() {
             lat: 29.9792,
             lng: 31.1342
         };
+        returnWeatherCoords();
         initMap();
     });
+
+    function returnWeatherCoords() {
+
+    }
 
     $('.search-button').click(function recordSearch() {
         //Increment keyNum Variable
