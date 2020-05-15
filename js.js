@@ -77,6 +77,7 @@ $( document ).ready(function() {
         // Prevent form from submitting
         event.preventDefault();
 
+    
         //Create Button
         const newSearch = document.createElement('button');
         newSearch.innerText = value;
