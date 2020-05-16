@@ -4,14 +4,47 @@ var coords =  {
 };
 
 function initMap() {
-    // console.log(coords);
+    var queryThreeURL = "https://api.openweathermap.org/data/2.5/weather?" + "lat=" + coords.lat + "&lon=" + coords.lng + "&appid=" + APIKey;
+
     var map = new google.maps.Map(
         document.getElementById('map'), {
             zoom: 15, center: coords});
+
     var marker = new google.maps.Marker({
         position: coords, map: map
-    });
+    })
+
+        $.ajax({    
+            url: queryThreeURL,      
+            method: "GET"
+        })
+            .then(function(response) {
+            
+            // console.log("New Coords:" + JSON.stringify(coords));
+    
+            $(".today-city").html("<h1>" + response.name + "</h1>");
+            $(".today-wind").text("Wind Speed: " + response.wind.speed + " MPH");
+            $(".today-humidity").text("Humidity: " + response.main.humidity + " %");
+    
+            // Display Weather Icons
+            // Icon sample => <i class="owf owf-200"></i>
+            $("#display-icon").html("<i class='owf owf-" + response.weather[0].id + " owf-5x'" + "></i>");
+    
+            // // Convert the temp to fahrenheit    
+            var tempF = (response.main.temp - 273.15) * 1.80 + 32;
+            console.log(tempF);
+    
+            // add temp content to html
+            $(".today-temp").text("Temperature (K) " + response.main.temp);
+            $(".today-tempF").text("Temperature: " + tempF.toFixed(2) + " (°F)");
+    
+            // Log the data in the console as well
+            console.log("Wind Speed: " + response.wind.speed);
+            console.log("Humidity: " + response.main.humidity);
+            console.log("Temperature (F): " + tempF);
+        });
 }
+
 
 var APIKey = 'db417286ffd067d079c3760d5405b45d';
 
@@ -47,43 +80,45 @@ var APIKey = 'db417286ffd067d079c3760d5405b45d';
 
 
 $('#pyramid').click(function pyramidMap() {
-    var queryThreeURL = "https://api.openweathermap.org/data/2.5/weather?" + "lat=" + coords.lat + "&lon=" + coords.lng + "&appid=" + APIKey;
-
     coords =  {
         lat: 29.9792,
         lng: 31.1342
     };
+    
+    var queryThreeURL = "https://api.openweathermap.org/data/2.5/weather?" + "lat=" + coords.lat + "&lon=" + coords.lng + "&appid=" + APIKey;
+            
     $.ajax({    
         url: queryThreeURL,      
         method: "GET"
     })
         .then(function(response) {
+        
+        // console.log("New Coords:" + JSON.stringify(coords));
 
-            // console.log("New Coords:" + JSON.stringify(coords));
+        $(".today-city").html("<h1>" + response.name + "</h1>");
+        $(".today-wind").text("Wind Speed: " + response.wind.speed + " MPH");
+        $(".today-humidity").text("Humidity: " + response.main.humidity + " %");
 
-            $(".today-city").html("<h1>" + response.name + "</h1>");
-            $(".today-wind").text("Wind Speed: " + response.wind.speed + " MPH");
-            $(".today-humidity").text("Humidity: " + response.main.humidity + " %");
+        // Display Weather Icons
+        // Icon sample => <i class="owf owf-200"></i>
+        $("#display-icon").html("<i class='owf owf-" + response.weather[0].id + " owf-5x'" + "></i>");
 
-            // Display Weather Icons
-            // Icon sample => <i class="owf owf-200"></i>
-            $("#display-icon").html("<i class='owf owf-" + response.weather[0].id + " owf-5x'" + "></i>");
+        // // Convert the temp to fahrenheit    
+        var tempF = (response.main.temp - 273.15) * 1.80 + 32;
+        console.log(tempF);
 
-            // // Convert the temp to fahrenheit    
-            var tempF = (response.main.temp - 273.15) * 1.80 + 32;
-            console.log(tempF);
+        // add temp content to html
+        $(".today-temp").text("Temperature (K) " + response.main.temp);
+        $(".today-tempF").text("Temperature: " + tempF.toFixed(2) + " (°F)");
 
-            // add temp content to html
-            $(".today-temp").text("Temperature (K) " + response.main.temp);
-            $(".today-tempF").text("Temperature: " + tempF.toFixed(2) + " (°F)");
+        // Log the data in the console as well
+        console.log("Wind Speed: " + response.wind.speed);
+        console.log("Humidity: " + response.main.humidity);
+        console.log("Temperature (F): " + tempF);
 
-            // Log the data in the console as well
-            console.log("Wind Speed: " + response.wind.speed);
-            console.log("Humidity: " + response.main.humidity);
-            console.log("Temperature (F): " + tempF);
-
+        initMap();
     });
-    initMap();
+
 });
 
 $( document ).ready(function() {
@@ -157,10 +192,6 @@ $( document ).ready(function() {
         newSearch.setAttribute('type', "submit");
         newSearch.setAttribute('id',keyNum);
 
-        ///////////////////////////////////Work Bench///////////////////////////////////
-
-        ///////////////////////////////////Work Bench///////////////////////////////////
-
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?" + "q=" + inputValue.value + ",US&appid=" + APIKey;
         var queryTwoURL = "https://api.openweathermap.org/data/2.5/forecast?" + "q=" + inputValue.value + ",US&appid=" + APIKey; 
         
@@ -177,14 +208,11 @@ $( document ).ready(function() {
             // Log the resulting object
             console.log('******* :' + JSON.parse(JSON.stringify(response)));
 
-            // Transfer content to HTML
-
-            // Update Map
-
             coords =  {
                 lat: response.coord.lat,
                 lng: response.coord.lon
             };
+            
             initMap();
 
             // console.log("New Coords:" + JSON.stringify(coords));

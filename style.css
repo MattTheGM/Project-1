@@ -28,6 +28,7 @@ body {
     text-align: center;
     align-items: center;
     position: sticky;
+    margin-bottom: .5em;
     left:0;
     right:0;
     top:0;
@@ -42,20 +43,18 @@ body {
 
 
 .wrapper {
-    display: grid;
+    /* display: grid; */
     grid-template-columns: 2fr 8fr;
-    grid-template-rows: auto;
+    /* grid-template-rows: auto; */
     /* grid-gap: 1em; */
-    /* grid-column-gap: 1em; */
-    /* grid-row-gap: .5em; */
-    font-size: 1.4rem;
-    overflow: hidden;
+    /* font-size: 1rem; */
+    /* overflow: hidden; */
 }
 
 .wrapper div {
     background: #373d42;
     color: whitesmoke;
-    padding-top: 1em;
+    margin-top: .5em;
     margin-bottom: .5em;
 }
 
@@ -119,15 +118,15 @@ form button:hover {
 
 .box-1 {
     grid-column: 1/2;
-    grid-row: 1/2;
-    margin-top: 1em;
+    grid-row: 0/1;
+    /* margin-top: 1em; */
 }
 
 .box-3 {
     grid-column: 2/4;
     grid-row: 1/2;
     /* margin-right: 10px; */
-    margin-top: 1em;
+    /* margin-top: 1em; */
 }
 
 .box-4 {
@@ -139,14 +138,36 @@ form button:hover {
 
 .box-5 {
     grid-column: 1/4;
-    align-items: center;
-    justify-content: center;
 }
+
+.box-5 button{
+    background: black;
+    color: greenyellow;
+    border: none;
+}
+
+
+.box-5 button:hover {
+    background: greenyellow;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+/* #pyramid {
+    align-self: center;
+    justify-self: center;
+    border: none;
+    color: greenyellow;
+    background: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+} */
+
 
 .box-6 {
     grid-column: 1/2;
-    /* align-items: center;
-    justify-content: center; */
+    align-items: center;
+    justify-content: center;
 }
 
 .card {
