@@ -1,3 +1,13 @@
+$('#pyramid-button').on('click', function (pyramidMap){
+    var queryLatURL = "http//:api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={db417286ffd067d079c3760d5405b45d}";
+    
+    coords =  {
+        lat: 29.9792,
+        lng: 31.1342
+    };
+    initMap();
+});
+
 var coords =  {
     lat: 45.8841,
     lng: -123.9686
