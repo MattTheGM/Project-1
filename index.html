@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=3, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css?family=Poppins&display=swap" 
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" 
         rel="stylesheet"
     />
     <link 
@@ -19,42 +19,53 @@
         rel="stylesheet" 
         type="text/css"
     />
-    <title>Weather App</title>
+
+    <title>Treasurebase</title>
 </head>
 <div class="navigbar">
     <div>
-        Weather Dashboard
+        Treasurebase
     </div>
 </div>
+<div class="box-4">
+    <button id="pyramid" type="submit" onclick="location.href='#pyramid-text';">Pyramids</button>
+    <button id="nuestra" type="submit" onclick="location.href='#nuestra-text';">Nuestra Señora</button>
+    <button id="natzi" type="submit" onclick="location.href='#natzi-text';">Natzi Loot</button>
+    <button id="triste" type="submit" onclick="location.href='#triste-text';">La Noche Triste</button>
+    <button id="borne" type="submit" onclick="location.href='#lafitte-text';">Jean LaFitte</button>
+    <button id="cocas" type="submit" onclick="location.href='#cocas-text';">Cocos Island</button>
+</div>
+<div class="parallax"></div>
 <body>
     <div class="wrapper">
+        <div class="box-0"></div>
         <div class="nested-row box-1">
             <form>
-              <input type="text" placeholder="Search by 'City, State'" id="search-input" value="">
+            <input type="text" placeholder="Search 'City, State'" id="search-input" value="">
                 <button class="search-button" type="submit">
                     <i class="fas fa-plus-square"></i>
                 </button>
             </form>
         </div>
-        <div class="nested-col box-3">
-            <div class ="card-x">
+        <div class="nested-col box-2">
+            <div class ="card">
                 <div class="today-city"></div>
                 <div id="display-moment"></div>
             </div>
-            <div class ="card-x">
+            <div class ="card">
                 <div class="today-tempF"></div>
             </div>
-            <div class ="card-x">
+            <div class ="card">
                 <div class="today-wind"></div>
             </div>
-            <div class ="card-x">
+            <div class ="card">
                 <div class="today-humidity"></div>
             </div>
-            <div class ="card-x">
+            <div class ="card">
                 <div id="display-icon"></div>
             </div>
         </div>
-        <div class="nested-col box-4">
+        <div class="nested-col box-3">
             <div class ="card">
                 <div id="day-one"></div>
                 <div id="tempF-8"></div>  
@@ -97,12 +108,168 @@
             </div>
         </div>
     </div>
-    <div id="map"></div>
-    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
-        <div class="container text-center">
-            <small>Copyright &copy; The Sweater Weather App</small>
+    <div class="parallax"></div>
+    <div  class="wrapper">
+        <div class="box-5">
+            <div id="triste-text">
+                <h2>
+                    <strong>The Treasure of La Noche Triste</strong>
+                </h2>
+                <br>
+                <p>
+                    In June 1520, the Aztecs drove Hernan Cortes and the Spanish conquistadores out of the capital city of Tenochitlan. As the Spanish fled, they took with them vast amounts of Aztecan gold and treasure, much of which was lost during their escale in the depths of the Tenochitlan waterways.
+                </p>
+                <br>
+                <p>
+                    <strong>Suspected Location:</strong> Waters around Tenochitlan (Dried Basin Under Mexico City)
+                </p>
+                <br>
+                <p>
+                    <strong>Wikipedia Page:</strong> https://en.wikipedia.org/wiki/La_Noche_Triste
+                </p>
+                <br>
+                <p>
+                    <strong>Estimated Value:</strong> $500 Million
+                </p>
+                <br>
+                <p>
+                    <strong>Origin:</strong> Aztec
+                </p>
+            </div>
+            <div id="pyramid-text">
+                <h2>
+                    <strong>The Great Pyramids of Egypt</strong>
+                </h2>
+                <br>
+                <p>
+                    TBD
+                </p>
+                <br>
+                <p>
+                    <strong>Suspected Location:</strong> TBD
+                </p>
+                <br>
+                <p>
+                    <strong>Wikipedia Page:</strong> TBD
+                </p>
+                <br>
+                <p>
+                    <strong>Estimated Value:</strong> TBD
+                </p>
+                <br>
+                <p>
+                    <strong>Origin:</strong> TBD
+                </p>
+            </div>
+            <div id="nuestra-text">
+                <h2>
+                    <strong>Nuestra Señora de Atocha's Lost Cargo</strong>
+                </h2>
+                <br>
+                <p>
+                    TBD
+                </p>
+                <br>
+                <p>
+                    <strong>Suspected Location:</strong> TBD
+                </p>
+                <br>
+                <p>
+                    <strong>Wikipedia Page:</strong> TBD
+                </p>
+                <br>
+                <p>
+                    <strong>Estimated Value:</strong> TBD
+                </p>
+                <br>
+                <p>
+                    <strong>Origin:</strong> TBD
+                </p>
+            </div>
+            <div id="lafitte-text">
+                <h2>
+                    <strong>The Treasure Of Jean LaFitte </strong>
+                </h2>
+                <br>
+                <p>
+                    TBD
+                </p>
+                <br>
+                <p>
+                    <strong>Suspected Location:</strong>
+                </p>
+                <br>
+                <p>
+                    <strong>Wikipedia Page:</strong>
+                </p>
+                <br>
+                <p>
+                    <strong>Estimated Value:</strong>
+                </p>
+                <br>
+                <p>
+                    <strong>Origin:</strong>
+                </p>
+            </div>
+            <div id="cocas-text">
+                <h2>
+                    <strong>The Treasure of Lima</strong>
+                </h2>
+                <br>
+                <p>
+                    TBD
+                </p>
+                <br>
+                <p>
+                    <strong>Suspected Location:</strong> TBD
+                </p>
+                <br>
+                <p>
+                    <strong>Wikipedia Page:</strong> TBD
+                </p>
+                <br>
+                <p>
+                    <strong>Estimated Value:</strong> TBD
+                </p>
+                <br>
+                <p>
+                    <strong>Origin:</strong> TBD
+                </p>
+            </div>
+            <div id="natzi-text">
+                <h2>
+                    <strong>European Treasures Stolen by the Nazis</strong>
+                </h2>
+                <br>
+                <p>
+                    TBD
+                </p>
+                <br>
+                <p>
+                    <strong>Suspected Location:</strong> TBD
+                </p>
+                <br>
+                <p>
+                    <strong>Wikipedia Page:</strong> TBD
+                </p>
+                <br>
+                <p>
+                    <strong>Estimated Value:</strong> TBD
+                </p>
+                <br>
+                <p>
+                    <strong>Origin:</strong> TBD
+                </p>
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
+    <footer id="sticky-footer">
+        <div>
+            <small>Copyright &copy; Treasurebase</small>
         </div>
     </footer>
+
     <!-- jQuery JS -->   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script
