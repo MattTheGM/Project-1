@@ -23,37 +23,42 @@
 
     <title>Treasurebase</title>
 </head>
-<div class="navigbar">
-    <div>
-        Treasurebase
+<div class = "container-fluid navigbar">
+    <div class="row">
+        <div class = "col-md-12">
+            Treasurebase
+        </div>
     </div>
-</div>
-<div class="box-4">
-    <button id="pyramid" type="submit" onclick="location.href='#pyramid-text';">Pyramids</button>
-    <button id="nuestra" type="submit" onclick="location.href='#nuestra-text';">Nuestra Señora</button>
-    <button id="natzi" type="submit" onclick="location.href='#natzi-text';">Natzi Loot</button>
-    <button id="triste" type="submit" onclick="location.href='#triste-text';">La Noche Triste</button>
-    <button id="borne" type="submit" onclick="location.href='#lafitte-text';">Jean LaFitte</button>
-    <button id="cocas" type="submit" onclick="location.href='#cocas-text';">Cocos Island</button>
+    <div class = "row navbuttonrow">
+        <div class = "col-md-2">
+            <button class="navbutton" id="pyramid" type="submit" onclick="location.href='#pyramid-text';">Pyramids</button>
+        </div>
+        <div class = "col-md-2">
+            <button class="navbutton" id="nuestra" type="submit" onclick="location.href='#nuestra-text';">Nuestra Señora</button>
+        </div>
+        <div class = "col-md-2">
+            <button class="navbutton" id="natzi" type="submit" onclick="location.href='#natzi-text';">Natzi Loot</button>
+        </div>
+        <div class = "col-md-2">
+            <button class="navbutton" id="triste" type="submit" onclick="location.href='#triste-text';">La Noche Triste</button> 
+        </div>
+        <div class = "col-md-2">
+            <button class="navbutton" id="borne" type="submit" onclick="location.href='#lafitte-text';">Jean LaFitte</button>
+        </div>
+        <div class = "col-md-2">
+            <button class="navbutton" id="cocas" type="submit" onclick="location.href='#cocas-text';">Cocos Island</button>
+        </div>
+    </div>
 </div>
 <div class="parallax"></div>
 <body>
     <div class="wrapper container-fluid">
-        <div class="box-0 row"></div>
-        <div class="nested-row box-1">
-            <form>
-            <input type="text" placeholder="Search 'City, State'" id="search-input" value="">
-                <button class="search-button" type="submit">
-                    <i class="fas fa-plus-square"></i>
-                </button>
-            </form>
-        </div>
-        <div class="nested-col box-2 row justify-content-center">
+        <div class="row justify-content-center align-items-center">
             <div class="col-md-2">
-                <div class ="card">
-                    <div class="today-city"></div>
-                    <div id="display-moment"></div>
-                </div>
+                    <div class ="card ">
+                        <div class="today-city"></div>
+                        <div id="display-moment"></div>
+                    </div>
             </div>
             <div class="col-md-2">
                 <div class ="card">
@@ -76,41 +81,51 @@
                 </div>
             </div>
         </div>
-        <div class="nested-col box-3">
-            <div class ="card">
-                <div id="day-one"></div>
-                <div id="tempF-8"></div>  
-                <div id="wind-8"></div>
-                <div id="humidity-8"></div>
-                <div id="show-me-8"></div>
+        <div class="row justify-content-center align-items-center">
+            <div class = "col-md-2">
+                <div class ="card">
+                    <div id="day-one"></div>
+                    <div id="tempF-8"></div>  
+                    <div id="wind-8"></div>
+                    <div id="humidity-8"></div>
+                    <div id="show-me-8"></div>
+                </div>
             </div>
-            <div class ="card">
-                <div id="day-two"></div>
-                <div id="tempF-16"></div>
-                <div id="wind-16"></div>
-                <div id="humidity-16"></div>
-                <div id="show-me-16"></div>
+            <div class = "col-md-2">
+                <div class ="card">
+                    <div id="day-two"></div>
+                    <div id="tempF-16"></div>
+                    <div id="wind-16"></div>
+                    <div id="humidity-16"></div>
+                    <div id="show-me-16"></div>
+                </div>
             </div>
-            <div class ="card">
-                <div id="day-three"></div>
-                <div id="tempF-24"></div>
-                <div id="wind-24"></div>
-                <div id="humidity-24"></div>
-                <div id="show-me-24"></div>
+            <div class = "col-md-2">
+                <div class ="card">
+                    <div id="day-three"></div>
+                    <div id="tempF-24"></div>
+                    <div id="wind-24"></div>
+                    <div id="humidity-24"></div>
+                    <div id="show-me-24"></div>
+                </div>
             </div>
-            <div class ="card">
-                <div id="day-four"></div>
-                <div id="tempF-32"></div>
-                <div id="wind-32"></div>
-                <div id="humidity-32"></div>
-                <div id="show-me-32"></div>
+            <div class = "col-md-2">
+                <div class ="card">
+                    <div id="day-four"></div>
+                    <div id="tempF-32"></div>
+                    <div id="wind-32"></div>
+                    <div id="humidity-32"></div>
+                    <div id="show-me-32"></div>
+                </div>
             </div>
-            <div class ="card">
-                <div id="day-five"></div>
-                <div id="tempF-39"></div>
-                <div id="wind-39"></div> 
-                <div id="humidity-39"></div>
-                <div id="show-me-39"></div>
+            <div class = "col-md-2">
+                <div class ="card">
+                    <div id="day-five"></div>
+                    <div id="tempF-39"></div>
+                    <div id="wind-39"></div> 
+                    <div id="humidity-39"></div>
+                    <div id="show-me-39"></div>
+                </div>
             </div>
         </div>
         <!-- <div class="box-2">
@@ -120,7 +135,7 @@
         </div> -->
     </div>
     <div class="parallax"></div>
-    <div  class="wrapper">
+    <div  class="wrapper container-fluid">
         <div class="box-5">
             <div id="triste-text">
                 <h2>
