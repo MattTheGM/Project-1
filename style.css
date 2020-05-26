@@ -17,6 +17,28 @@
     padding-top: 1rem;
 }
 
+.jumbotron {
+    padding-top: 10%;
+    padding-bottom: 35%;
+    color: white;
+    text-shadow:
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000;
+    ;
+}
+
+.main {
+    font-size: 72px;
+    padding-bottom: 10%;
+}
+
+.sub {
+    font-size: 40px;
+    padding-bottom: 10%;
+}
+
 .navigbar {
     /* grid-gap: 1em; */
     background-color: lightgray;
@@ -138,10 +160,6 @@ align = y or column axis */
 }
 
 .box-5 {
-    display: grid;
-    grid-gap: 4em;
-    grid-template-columns: repeat(3,1fr);
-    padding: 2em;
     font-size: 1rem;
 }
 

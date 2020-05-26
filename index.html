@@ -23,278 +23,241 @@
 
     <title>Treasurebase</title>
 </head>
-<div class = "container-fluid navigbar">
-    <div class="row">
-        <div class = "col-md-12">
-            Treasurebase
+    <div class = "navigbar">
+        <div class="row">
+            <div class = "col-md-12">
+                Treasurebase
+            </div>
+        </div>
+        <div class = "row navbuttonrow">
+            <div class = "col-md-2">
+                <button class="navbutton" id="pyramid" type="submit" onclick="location.href='#pyramid-text';">Pyramids</button>
+            </div>
+            <div class = "col-md-2">
+                <button class="navbutton" id="nuestra" type="submit" onclick="location.href='#nuestra-text';">Nuestra Señora</button>
+            </div>
+            <div class = "col-md-2">
+                <button class="navbutton" id="natzi" type="submit" onclick="location.href='#natzi-text';">Natzi Loot</button>
+            </div>
+            <div class = "col-md-2">
+                <button class="navbutton" id="triste" type="submit" onclick="location.href='#triste-text';">La Noche Triste</button> 
+            </div>
+            <div class = "col-md-2">
+                <button class="navbutton" id="borne" type="submit" onclick="location.href='#lafitte-text';">Jean LaFitte</button>
+            </div>
+            <div class = "col-md-2">
+                <button class="navbutton" id="cocas" type="submit" onclick="location.href='#cocas-text';">Cocos Island</button>
+            </div>
         </div>
     </div>
-    <div class = "row navbuttonrow">
-        <div class = "col-md-2">
-            <button class="navbutton" id="pyramid" type="submit" onclick="location.href='#pyramid-text';">Pyramids</button>
+        <div class = "jumbotron parallax container-fluid">
+            <div class = "row">
+                <div class = "main col-md-12 text-center">
+                    <div>Welcome to the Treasurebase</div>
+                </div>
+                <div class = "sub col-md-12 text-center">
+                    <div>Our Goal</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
         </div>
-        <div class = "col-md-2">
-            <button class="navbutton" id="nuestra" type="submit" onclick="location.href='#nuestra-text';">Nuestra Señora</button>
-        </div>
-        <div class = "col-md-2">
-            <button class="navbutton" id="natzi" type="submit" onclick="location.href='#natzi-text';">Natzi Loot</button>
-        </div>
-        <div class = "col-md-2">
-            <button class="navbutton" id="triste" type="submit" onclick="location.href='#triste-text';">La Noche Triste</button> 
-        </div>
-        <div class = "col-md-2">
-            <button class="navbutton" id="borne" type="submit" onclick="location.href='#lafitte-text';">Jean LaFitte</button>
-        </div>
-        <div class = "col-md-2">
-            <button class="navbutton" id="cocas" type="submit" onclick="location.href='#cocas-text';">Cocos Island</button>
-        </div>
-    </div>
-</div>
-<div class="parallax"></div>
-<body>
-    <div class="wrapper container-fluid">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-md-2">
-                    <div class ="card ">
-                        <div class="today-city"></div>
-                        <div id="display-moment"></div>
+        <body>
+            <!-- <div class="wrapper container-fluid">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-2">
+                            <div class ="card ">
+                                <div class="today-city"></div>
+                                <div id="display-moment"></div>
+                            </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class ="card">
+                            <div class="today-tempF"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class ="card">
+                            <div class="today-wind"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class ="card">
+                            <div class="today-humidity"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class ="card">
+                            <div id="display-icon"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <div class = "col-md-2">
+                        <div class ="card">
+                            <div id="day-one"></div>
+                            <div id="tempF-8"></div>  
+                            <div id="wind-8"></div>
+                            <div id="humidity-8"></div>
+                            <div id="show-me-8"></div>
+                        </div>
+                    </div>
+                    <div class = "col-md-2">
+                        <div class ="card">
+                            <div id="day-two"></div>
+                            <div id="tempF-16"></div>
+                            <div id="wind-16"></div>
+                            <div id="humidity-16"></div>
+                            <div id="show-me-16"></div>
+                        </div>
+                    </div>
+                    <div class = "col-md-2">
+                        <div class ="card">
+                            <div id="day-three"></div>
+                            <div id="tempF-24"></div>
+                            <div id="wind-24"></div>
+                            <div id="humidity-24"></div>
+                            <div id="show-me-24"></div>
+                        </div>
+                    </div>
+                    <div class = "col-md-2">
+                        <div class ="card">
+                            <div id="day-four"></div>
+                            <div id="tempF-32"></div>
+                            <div id="wind-32"></div>
+                            <div id="humidity-32"></div>
+                            <div id="show-me-32"></div>
+                        </div>
+                    </div>
+                    <div class = "col-md-2">
+                        <div class ="card">
+                            <div id="day-five"></div>
+                            <div id="tempF-39"></div>
+                            <div id="wind-39"></div> 
+                            <div id="humidity-39"></div>
+                            <div id="show-me-39"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="parallax"></div> -->
+            <div  class="wrapper container-fluid">
+                <div class="box-5 row">
+                    <div class = "col-md-3">
+                        <div id="triste-text">
+                            <h2>
+                                <strong>The Treasure of La Noche Triste</strong>
+                            </h2>
+                            <br>
+                            <p>
+                                In June 1520, the Aztecs drove Hernan Cortes and the Spanish conquistadores out of the capital city of Tenochitlan. As the Spanish fled, they took with them vast amounts of Aztecan gold and treasure, much of which was lost during their escale in the depths of the Tenochitlan waterways.
+                            </p>
+                            <br>
+                            <p>
+                                <strong>Suspected Location:</strong> Waters around Tenochitlan (Dried Basin Under Mexico City)
+                            </p>
+                            <br>
+                            <p>
+                                <strong>Wikipedia Page:</strong> https://en.wikipedia.org/wiki/La_Noche_Triste
+                            </p>
+                            <br>
+                            <p>
+                                <strong>Estimated Value:</strong> $500 Million
+                            </p>
+                            <br>
+                            <p>
+                                <strong>Origin:</strong> Aztec
+                            </p>
+                        </div>
+                    </div>
+                    <div class = "col-md-9">
+                        <div class = "row">
+                            <div class = "col-md-12">
+                                <div class="row justify-content-center align-items-center">
+                                    <div class="col-md-2">
+                                            <div class ="card">
+                                                <div class="today-city"></div>
+                                                <div id="display-moment"></div>
+                                            </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class ="card">
+                                            <div class="today-tempF"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class ="card">
+                                            <div class="today-wind"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class ="card">
+                                            <div class="today-humidity"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class ="card">
+                                            <div id="display-icon"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center align-items-center">
+                                    <div class = "col-md-2">
+                                        <div class ="card">
+                                            <div id="day-one"></div>
+                                            <div id="tempF-8"></div>  
+                                            <div id="wind-8"></div>
+                                            <div id="humidity-8"></div>
+                                            <div id="show-me-8"></div>
+                                        </div>
+                                    </div>
+                                    <div class = "col-md-2">
+                                        <div class ="card">
+                                            <div id="day-two"></div>
+                                            <div id="tempF-16"></div>
+                                            <div id="wind-16"></div>
+                                            <div id="humidity-16"></div>
+                                            <div id="show-me-16"></div>
+                                        </div>
+                                    </div>
+                                    <div class = "col-md-2">
+                                        <div class ="card">
+                                            <div id="day-three"></div>
+                                            <div id="tempF-24"></div>
+                                            <div id="wind-24"></div>
+                                            <div id="humidity-24"></div>
+                                            <div id="show-me-24"></div>
+                                        </div>
+                                    </div>
+                                    <div class = "col-md-2">
+                                        <div class ="card">
+                                            <div id="day-four"></div>
+                                            <div id="tempF-32"></div>
+                                            <div id="wind-32"></div>
+                                            <div id="humidity-32"></div>
+                                            <div id="show-me-32"></div>
+                                        </div>
+                                    </div>
+                                    <div class = "col-md-2">
+                                        <div class ="card">
+                                            <div id="day-five"></div>
+                                            <div id="tempF-39"></div>
+                                            <div id="wind-39"></div> 
+                                            <div id="humidity-39"></div>
+                                            <div id="show-me-39"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div id="map"></div>
                     </div>
             </div>
-            <div class="col-md-2">
-                <div class ="card">
-                    <div class="today-tempF"></div>
+            <footer id="sticky-footer">
+                <div>
+                    <small>Copyright &copy; Treasurebase</small>
                 </div>
-            </div>
-            <div class="col-md-2">
-                <div class ="card">
-                    <div class="today-wind"></div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class ="card">
-                    <div class="today-humidity"></div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class ="card">
-                    <div id="display-icon"></div>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center align-items-center">
-            <div class = "col-md-2">
-                <div class ="card">
-                    <div id="day-one"></div>
-                    <div id="tempF-8"></div>  
-                    <div id="wind-8"></div>
-                    <div id="humidity-8"></div>
-                    <div id="show-me-8"></div>
-                </div>
-            </div>
-            <div class = "col-md-2">
-                <div class ="card">
-                    <div id="day-two"></div>
-                    <div id="tempF-16"></div>
-                    <div id="wind-16"></div>
-                    <div id="humidity-16"></div>
-                    <div id="show-me-16"></div>
-                </div>
-            </div>
-            <div class = "col-md-2">
-                <div class ="card">
-                    <div id="day-three"></div>
-                    <div id="tempF-24"></div>
-                    <div id="wind-24"></div>
-                    <div id="humidity-24"></div>
-                    <div id="show-me-24"></div>
-                </div>
-            </div>
-            <div class = "col-md-2">
-                <div class ="card">
-                    <div id="day-four"></div>
-                    <div id="tempF-32"></div>
-                    <div id="wind-32"></div>
-                    <div id="humidity-32"></div>
-                    <div id="show-me-32"></div>
-                </div>
-            </div>
-            <div class = "col-md-2">
-                <div class ="card">
-                    <div id="day-five"></div>
-                    <div id="tempF-39"></div>
-                    <div id="wind-39"></div> 
-                    <div id="humidity-39"></div>
-                    <div id="show-me-39"></div>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="box-2">
-            <div id="pyramid-button" class="text-center">
-                Pyramid
-            </div>
-        </div> -->
+            </footer>    
     </div>
-    <div class="parallax"></div>
-    <div  class="wrapper container-fluid">
-        <div class="box-5">
-            <div id="triste-text">
-                <h2>
-                    <strong>The Treasure of La Noche Triste</strong>
-                </h2>
-                <br>
-                <p>
-                    In June 1520, the Aztecs drove Hernan Cortes and the Spanish conquistadores out of the capital city of Tenochitlan. As the Spanish fled, they took with them vast amounts of Aztecan gold and treasure, much of which was lost during their escale in the depths of the Tenochitlan waterways.
-                </p>
-                <br>
-                <p>
-                    <strong>Suspected Location:</strong> Waters around Tenochitlan (Dried Basin Under Mexico City)
-                </p>
-                <br>
-                <p>
-                    <strong>Wikipedia Page:</strong> https://en.wikipedia.org/wiki/La_Noche_Triste
-                </p>
-                <br>
-                <p>
-                    <strong>Estimated Value:</strong> $500 Million
-                </p>
-                <br>
-                <p>
-                    <strong>Origin:</strong> Aztec
-                </p>
-            </div>
-            <div id="pyramid-text">
-                <h2>
-                    <strong>The Great Pyramids of Egypt</strong>
-                </h2>
-                <br>
-                <p>
-                    TBD
-                </p>
-                <br>
-                <p>
-                    <strong>Suspected Location:</strong> TBD
-                </p>
-                <br>
-                <p>
-                    <strong>Wikipedia Page:</strong> TBD
-                </p>
-                <br>
-                <p>
-                    <strong>Estimated Value:</strong> TBD
-                </p>
-                <br>
-                <p>
-                    <strong>Origin:</strong> TBD
-                </p>
-            </div>
-            <div id="nuestra-text">
-                <h2>
-                    <strong>Nuestra Señora de Atocha's Lost Cargo</strong>
-                </h2>
-                <br>
-                <p>
-                    TBD
-                </p>
-                <br>
-                <p>
-                    <strong>Suspected Location:</strong> TBD
-                </p>
-                <br>
-                <p>
-                    <strong>Wikipedia Page:</strong> TBD
-                </p>
-                <br>
-                <p>
-                    <strong>Estimated Value:</strong> TBD
-                </p>
-                <br>
-                <p>
-                    <strong>Origin:</strong> TBD
-                </p>
-            </div>
-            <div id="lafitte-text">
-                <h2>
-                    <strong>The Treasure Of Jean LaFitte </strong>
-                </h2>
-                <br>
-                <p>
-                    TBD
-                </p>
-                <br>
-                <p>
-                    <strong>Suspected Location:</strong>
-                </p>
-                <br>
-                <p>
-                    <strong>Wikipedia Page:</strong>
-                </p>
-                <br>
-                <p>
-                    <strong>Estimated Value:</strong>
-                </p>
-                <br>
-                <p>
-                    <strong>Origin:</strong>
-                </p>
-            </div>
-            <div id="cocas-text">
-                <h2>
-                    <strong>The Treasure of Lima</strong>
-                </h2>
-                <br>
-                <p>
-                    TBD
-                </p>
-                <br>
-                <p>
-                    <strong>Suspected Location:</strong> TBD
-                </p>
-                <br>
-                <p>
-                    <strong>Wikipedia Page:</strong> TBD
-                </p>
-                <br>
-                <p>
-                    <strong>Estimated Value:</strong> TBD
-                </p>
-                <br>
-                <p>
-                    <strong>Origin:</strong> TBD
-                </p>
-            </div>
-            <div id="natzi-text">
-                <h2>
-                    <strong>European Treasures Stolen by the Nazis</strong>
-                </h2>
-                <br>
-                <p>
-                    TBD
-                </p>
-                <br>
-                <p>
-                    <strong>Suspected Location:</strong> TBD
-                </p>
-                <br>
-                <p>
-                    <strong>Wikipedia Page:</strong> TBD
-                </p>
-                <br>
-                <p>
-                    <strong>Estimated Value:</strong> TBD
-                </p>
-                <br>
-                <p>
-                    <strong>Origin:</strong> TBD
-                </p>
-            </div>
-        </div>
-        <div id="map"></div>
-    </div>
-    <footer id="sticky-footer">
-        <div>
-            <small>Copyright &copy; Treasurebase</small>
-        </div>
-    </footer>
 
     <!-- jQuery JS -->   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

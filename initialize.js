@@ -12,9 +12,9 @@ function initMap() {
 
     var map = new google.maps.Map(
         document.getElementById('map'), {
-            zoom: 5,
+            zoom: 10,
             center: coords,
-            style: [
+            styles: [
                 {
                   "featureType": "administrative",
                   "elementType": "geometry",
