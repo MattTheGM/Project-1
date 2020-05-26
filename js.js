@@ -253,21 +253,6 @@ function forecastWeather () {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $( document ).ready(function() {
     const searchButton = document.querySelector('.search-button');
     const searchList = document.querySelector('.search-list');
