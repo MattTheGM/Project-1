@@ -252,22 +252,6 @@ function forecastWeather () {
     });
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $( document ).ready(function() {
     const searchButton = document.querySelector('.search-button');
     const searchList = document.querySelector('.search-list');
@@ -461,6 +445,26 @@ $( document ).ready(function() {
         inputValue.value = "";
     });
 });
+
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
 
 //     $.ajax({    
