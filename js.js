@@ -90,7 +90,6 @@ $('#borne').click(function () {
     forecastWeather ()
 });
 
-
     dayToday();
     dayFuture();
 

@@ -65,6 +65,14 @@
     left:0;
     right:0;
     top:0;
+    animation: heading;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes heading {
+    0% {top: 150px}
+    100% {top: 1px}
 }
 
 @keyframes heading {
@@ -285,5 +293,4 @@ footer div {
 
 .tile:hover > .back {
     transform: perspective(600px) rotateY(0deg);
-    
 }
