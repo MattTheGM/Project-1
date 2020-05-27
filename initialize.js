@@ -252,8 +252,6 @@ function initMap() {
     });
 }
 
-// Treasure Location Buttons
-
 $('#pyramid').click(function pyramidMap() {
     coords =  {
         lat: 29.9792,

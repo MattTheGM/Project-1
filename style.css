@@ -30,13 +30,27 @@
 }
 
 .main {
-    font-size: 72px;
+    font-size: 7rem;
     padding-bottom: 10%;
+    z-index: 1;
+    left:0;
+    right:0;
+    top:0;
+    animation: heading;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
 }
 
 .sub {
-    font-size: 40px;
+    font-size: 4rem;
     padding-bottom: 10%;
+    z-index: 1;
+    left:0;
+    right:0;
+    top:0;
+    animation: heading;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
 }
 
 .navigbar {
@@ -53,14 +67,20 @@
     top:0;
 }
 
+@keyframes heading {
+    0% {
+        top: 150px;
+        opacity: 0;
+    }
+    100% {
+        top: 1px;
+        opacity: 1;
+    }
+}
+
 .navigbar div {
     color: #d9a738;
     height: auto;
-}
-
-
-.wrapper {
-    grid-template-columns: 2fr 8fr;
 }
 
 .wrapper div {
@@ -163,11 +183,9 @@ align = y or column axis */
     font-size: 1rem;
 }
 
-.box-6 {
-    display: grid;
-    grid-gap: 4em;
-    grid-template-columns: repeat(3,1fr);
-    padding: 2em;
+.box-7 {
+    grid-column: 1/4;
+    grid-row: 2/3;
 }
 
 .card {
@@ -213,4 +231,59 @@ footer div {
     background-attachment: fixed;
     height: 500px;
     margin-top: 2px;
+}
+
+/* .middle {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+} */
+
+.tile {
+    cursor: pointer;
+    height: 71.5em;
+}
+
+/* .tile {
+    cursor: pointer;
+    width: 340px;
+    height: 480px;
+} */
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+}
+
+.front img {
+    height: 100%;
+}
+
+.front {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.back {
+    background: whitesmoke;
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.back-content {
+    color: black;
+    text-align: center;
+    width: 100%;
+}
+
+.tile:hover > .front {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.tile:hover > .back {
+    transform: perspective(600px) rotateY(0deg);
+    
 }
