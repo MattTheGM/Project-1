@@ -1,6 +1,9 @@
 * {
     margin: 0;
     padding: 0;
+    /* border-width: 1;
+    border-style: solid;
+    border-color: red; */
     box-sizing: border-box;
     font-family: 'Aldrich', sans-serif;
 }
@@ -14,7 +17,40 @@
     padding-top: 1rem;
 }
 
-body {
+.jumbotron {
+    padding-top: 10%;
+    padding-bottom: 35%;
+    color: white;
+    text-shadow:
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000;
+    ;
+}
+
+.main {
+    font-size: 7rem;
+    padding-bottom: 10%;
+    z-index: 1;
+    left:0;
+    right:0;
+    top:0;
+    animation: heading;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.sub {
+    font-size: 4rem;
+    padding-bottom: 10%;
+    z-index: 1;
+    left:0;
+    right:0;
+    top:0;
+    animation: heading;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
 }
 
 .navigbar {
@@ -22,8 +58,6 @@ body {
     background-color: lightgray;
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr;
-    grid-auto-rows: 100px;
     font-size: 3em;
     text-align: center;
     position: sticky;
@@ -43,16 +77,20 @@ body {
     100% {opacity: 1;} 
 }
 
+@keyframes heading {
+    0% {
+        top: 150px;
+        opacity: 0;
+    }
+    100% {
+        top: 1px;
+        opacity: 1;
+    }
+}
 
 .navigbar div {
     color: #d9a738;
-    padding: 2rem;
     height: auto;
-}
-
-
-.wrapper {
-    grid-template-columns: 2fr 8fr;
 }
 
 .wrapper div {
@@ -133,57 +171,31 @@ align = y or column axis */
     /* margin-top: 1em; */
 }
 
-.box-2 {
-    grid-column: 2/4;
-    grid-row: 1/2;
-    font-size: 2em;
+.navbuttonrow {
+    background: #d9a738;
 }
 
-.box-3 {
-    grid-column: 1/4;
-    grid-row: 2/3;
-}
-
-.box-4 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-gap: .2rem;
-    margin-left: .2rem;
-    margin-right: .2rem;
-    margin-top: .2rem;
-    margin-bottom: .2rem;
-    /* justify-items: center; */
-}
-
-.box-4 button{
+.navbutton {
+    font-size: xx-large;
     background: #d9a738;
     color: whitesmoke;
     border: none;
-    padding: .5em;
-    font-size: 1em;
 }
 
-.box-4 button:hover {
+.navbutton:hover {
     background: whitesmoke;
     color: #d9a738;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 1em;
 }
 
 .box-5 {
-    display: grid;
-    grid-gap: 4em;
-    grid-template-columns: repeat(3,1fr);
-    padding: 2em;
     font-size: 1rem;
 }
 
-.box-6 {
-    display: grid;
-    grid-gap: 4em;
-    grid-template-columns: repeat(3,1fr);
-    padding: 2em;
+.box-7 {
+    grid-column: 1/4;
+    grid-row: 2/3;
 }
 
 .card {
@@ -230,7 +242,6 @@ footer div {
     height: 500px;
     margin-top: 2px;
 }
-
 .modal {
     display: none;
     position: fixed;
@@ -247,8 +258,8 @@ footer div {
   
   .modal-content {
     background-color: #fefefe;
-    margin: auto;
     padding: 20px;
+    margin: auto;
     border: 1px solid #888;
     width: 30%;
     text-align: center;
@@ -257,8 +268,8 @@ footer div {
   .close {
     color: #aaaaaa;
     float: right;
-    font-size: 28px;
     font-weight: bold;
+    font-size: 28px;
   }
   
   .close:hover,
@@ -273,7 +284,6 @@ footer div {
       width: 5cm;
       height: 1cm;
   }
-
   .form-control {
       width: 5cm;
       margin-left: 1cm;
@@ -282,8 +292,8 @@ footer div {
 
   .form-control-1 {
       width: 5cm;
-      margin-left: .5cm;
   }
+      margin-left: .5cm;
 
   .col-form-label {
       margin-left: 1cm;
@@ -296,7 +306,7 @@ footer div {
   h4 {
       text-align: center;
   }
-
   .btn {
+
     margin-left: .5cm;
   }
