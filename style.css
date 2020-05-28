@@ -78,6 +78,10 @@
     }
 }
 
+#destination {
+    padding-top: 5%;
+}
+
 .navigbar div {
     color: #d9a738;
     height: auto;
@@ -94,16 +98,6 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.nested-row {
-    display: grid;
-}
-
-.nested-col {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    margin: none;
 }
 
 div #display-moment {
@@ -242,7 +236,7 @@ footer div {
 
 .tile {
     cursor: pointer;
-    height: 70em;
+    height: 64.5em;
 }
 
 .front, .back {
