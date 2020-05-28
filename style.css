@@ -11,13 +11,12 @@
 #map {
     height: 400px;  /* The height is 400 pixels */
     width: auto;  /* The width is the width of the web page */
-    /* margin-left: 25%;
-    margin-right: 25%; */
     outline: 2px solid #d9a738;
     padding-top: 1rem;
 }
 
 .jumbotron {
+    overflow: auto;
     padding-top: 10%;
     padding-bottom: 35%;
     color: white;
@@ -54,10 +53,7 @@
 }
 
 .navigbar {
-    /* grid-gap: 1em; */
     background-color: lightgray;
-    display: grid;
-    width: 100%;
     font-size: 3em;
     text-align: center;
     position: sticky;
@@ -65,14 +61,6 @@
     left:0;
     right:0;
     top:0;
-    animation: heading;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes heading {
-    0% {top: 150px}
-    100% {top: 1px}
 }
 
 @keyframes heading {
@@ -149,20 +137,6 @@ form button:hover {
     color: #d9a738;
 }
 
-/* justify = x or row axis
-align = y or column axis */
-
-.box-0 {
-    grid-auto-rows: 100px;
-}
-
-.box-1 {
-    display: grid;
-    grid-column: 1/2;
-    grid-row: 0/1;
-    /* margin-top: 1em; */
-}
-
 .navbuttonrow {
     background: #d9a738;
 }
@@ -211,17 +185,6 @@ footer div {
     color: #d9a738;
 }
 
-.search-container {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-  }
-
-.search-list {
-    min-width: 30%;
-    list-style: none;
-  }
-
 ::placeholder {
     color: black;
 }
@@ -234,13 +197,6 @@ footer div {
     height: 500px;
     margin-top: 2px;
 }
-
-/* .middle {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-} */
 
 .tile {
     cursor: pointer;
