@@ -24,22 +24,22 @@
         </div>
         <div class = "row navbuttonrow">
             <div class = "col-md-2">
-                <button class="navbutton" id="pyramid" type="submit" onclick="location.href='#card-space';">Pyramids</button>
+                <button class="navbutton" id="pyramid" type="submit">Pyramids</button>
             </div>
             <div class = "col-md-2">
-                <button class="navbutton" id="nuestra" type="submit" onclick="location.href='#card-space';">Nuestra Señora</button>
+                <button class="navbutton" id="nuestra" type="submit">Nuestra Señora</button>
             </div>
             <div class = "col-md-2">
-                <button class="navbutton" id="natzi" type="submit" onclick="location.href='#card-space';">Natzi Loot</button>
+                <button class="navbutton" id="natzi" type="submit">Natzi Loot</button>
             </div>
             <div class = "col-md-2">
-                <button class="navbutton" id="triste" type="submit" onclick="location.href='#card-space';">La Noche Triste</button> 
+                <button class="navbutton" id="triste" type="submit">La Noche Triste</button> 
             </div>
             <div class = "col-md-2">
-                <button class="navbutton" id="borne" type="submit" onclick="location.href='#card-space';">Jean LaFitte</button>
+                <button class="navbutton" id="borne" type="submit">Jean LaFitte</button>
             </div>
             <div class = "col-md-2">
-                <button class="navbutton" id="cocas" type="submit" onclick="location.href='#card-space';">Cocos Island</button>
+                <button class="navbutton" id="cocas" type="submit">Cocos Island</button>
             </div>
         </div>
     </div>
@@ -62,7 +62,7 @@
                             <div id = "card-space" class = "col-md-12">
                                 <div class="tile row">
                                     <div class="front col-md-12">
-                                        <img src="Assets/Noche_Triste.jpg" alt="Noche_Triste">
+                                        <img src="Assets/haystack.png" alt="Haystack_Rock">
                                     </div>
                                     <div class="back row">
                                         <div class="back-content col-md-12">
@@ -181,149 +181,59 @@
                             </div>
                         </div>
                     </div>
-            </div>
-            <footer id="sticky-footer">
-                <div>
-                    <small>Copyright &copy; Treasurebase</small>
                 </div>
-            </footer>
-    </div>
+                <footer id="sticky-footer">
+                    <div class = "row">
+                        <div class = "col-md-12">
+                            <small>Copyright &copy; Treasurebase</small>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col-md-12">
+                            <button id="myBtn">Email us</button>
+                            <div id="myModal" class="modal">
+                                <div class="modal-content">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label">Recipient:</label><br>
+                                            <textarea type="text" class="form-control-1" id="recipient-name">inbox@treasurebase.org</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label-1">Message:</label><br>
+                                            <textarea type="text" class="form-control-1" id="message-text" rows=7></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Send message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </body>
 
     <!-- jQuery JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="buttonfunctions.js"></script>
     <script src="js.js"></script>
     <script src="initialize.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDEizFArd13hBQW8HG44MCIbZxJgx2Yuw&callback=initMap">
     </script>
-</body>
 </html> 
-
-
-<!-- <div id="pyramid-text">
-    <h2>
-        <strong>The Great Pyramids of Egypt</strong>
-    </h2>
-    <br>
-    <p>
-        TBD
-    </p>
-    <br>
-    <p>
-        <strong>Suspected Location:</strong> TBD
-    </p>
-    <br>
-    <p>
-        <strong>Wikipedia Page:</strong> TBD
-    </p>
-    <br>
-    <p>
-        <strong>Estimated Value:</strong> TBD
-    </p>
-    <br>
-    <p>
-        <strong>Origin:</strong> TBD
-    </p>
-</div>
-<div id="nuestra-text">
-    <h2>
-        <strong>Nuestra Señora de Atocha's Lost Cargo</strong>
-    </h2>
-    <br>
-    <p>
-        TBD
-    </p>
-    <br>
-    <p>
-        <strong>Suspected Location:</strong> TBD
-    </p>
-    <br>
-    <p>
-        <strong>Wikipedia Page:</strong> TBD
-    </p>
-    <br>
-    <p>
-        <strong>Estimated Value:</strong> TBD
-    </p>
-    <br>
-    <p>
-        <strong>Origin:</strong> TBD
-    </p>
-</div>
-<div id="lafitte-text">
-    <h2>
-        <strong>The Treasure Of Jean LaFitte </strong>
-    </h2>
-    <br>
-    <p>
-        TBD
-    </p>
-    <br>
-    <p>
-        <strong>Suspected Location:</strong>
-    </p>
-    <br>
-    <p>
-        <strong>Wikipedia Page:</strong>
-    </p>
-    <br>
-    <p>
-        <strong>Estimated Value:</strong>
-    </p>
-    <br>
-    <p>
-        <strong>Origin:</strong>
-    </p>
-</div>
-<div id="cocas-text">
-    <h2>
-        <strong>The Treasure of Lima</strong>
-    </h2>
-    <br>
-    <p>
-        TBD
-    </p>
-    <br>
-    <p>
-        <strong>Suspected Location:</strong> TBD
-    </p>
-    <br>
-    <p>
-        <strong>Wikipedia Page:</strong> TBD
-    </p>
-    <br>
-    <p>
-        <strong>Estimated Value:</strong> TBD
-    </p>
-    <br>
-    <p>
-        <strong>Origin:</strong> TBD
-    </p>
-</div>
-<div id="natzi-text">
-    <h2>
-        <strong>European Treasures Stolen by the Nazis</strong>
-    </h2>
-    <br>
-    <p>
-        TBD
-    </p>
-    <br>
-    <p>
-        <strong>Suspected Location:</strong> TBD
-    </p>
-    <br>
-    <p>
-        <strong>Wikipedia Page:</strong> TBD
-    </p>
-    <br>
-    <p>
-        <strong>Estimated Value:</strong> TBD
-    </p>
-    <br>
-    <p>
-        <strong>Origin:</strong> TBD
-    </p>
-</div> -->
