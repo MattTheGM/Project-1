@@ -44,7 +44,6 @@ $( document ).ready(function() {
         dayFiveShow.innerHTML = dayFiveMoment;
     }
 
-        
     $('#pyramid').click(function () {
         coords =  {
             lat: 29.9792,
